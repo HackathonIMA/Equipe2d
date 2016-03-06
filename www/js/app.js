@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('starter', ['ionic'])
+var myApp = angular.module('starter', ['ionic'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,3 +22,16 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+myApp.controller('index', function($scope, $http){
+  $scope.dados= ['Pronto Atendimento Centro', 'Centro de Saúde Jardim Aurélia', 'Centro de Saúde Jardim Aeroporto', 'Pronto Atendimento Vila Padre Anchieta'];
+  /**
+  <!-- $http.get("http://187.110.34.152:4000/api/v1/health_cares/history").then(function(response){
+          var myData = JSON.parse(response.data);
+          //  console.log(response.data);
+           console.log(myData);
+         }, function(erro) {
+           console.log(erro);
+         }); -->
+         */ 
+});
